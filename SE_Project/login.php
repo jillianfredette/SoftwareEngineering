@@ -25,7 +25,7 @@
          
          header("location: welcome.php");
       }else {
-         $error_message = "Your Login Name or Password is invalid";
+         $error_message = "Error: Your Username or Password is Invalid";
       }
    }
 ?>
@@ -36,18 +36,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-win8.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
     <style type="text/css">
         body {
-            font-family: 'Raleway', Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 14px;
         }
 
         h1 {
             white-space: nowrap;
-            font-size: 30px;
+            font-size: 50px;
         }
 
         h2 {
@@ -77,22 +77,24 @@
 
 </head>
 
-<body>
+<body class="w3-panel w3-center w3-flat-silver">
 
+<div class="w3-container w3-center">
     <header class="w3-panel w3-center" style="padding-top:25px">
-        <h1>
+        <h1 class="w3-text-dark-grey">
             Admin Portal
         </h1>
     </header>
+    </div>
 
-    <div class="w3-panel w3-center">
+    <div class="w3-card-4 w3-blue-gray w3-center w3-display-middle" style="width:25%">
 
         <h2>
             Login
         </h2>
 
         <form id='login' action="" method='post' accept-charset='UTF-8' style="margin: 0px auto; width: 300px;">
-            <fieldset style="width:300px; align-content: right">
+            <fieldset style="width:300px; align-content: right; padding-right:25px">
                 <input type='hidden' name='submitted' id='submitted' value='1' />
                 <label for='username'>Username:</label>
                 <input type='text' name='username' id='username' maxlength="50" />
@@ -102,11 +104,12 @@
                 <input type='password' name='password' id='password' maxlength="50" />
                 <br>
                 <br>
-                <button class="w3-button" type="submit"><i class='fas fa-arrow-right' style="background-color: none; color: black; border: none;"></i></button>
+                <button class="w3-button w3-flat-midnight-blue" type="submit">Submit</button>
             </fieldset>
         </form>
 
-        <div align="center" style="font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error_message; ?>
+        <div align="center" style="font-size:14px; color:#8b0000; padding-bottom:20px">
+        <b><?php echo $error_message; ?></b>
         </div>
 
     </div>
