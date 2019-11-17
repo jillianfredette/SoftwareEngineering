@@ -104,7 +104,7 @@
                 <input type='password' name='password' id='password' maxlength="50" />
                 <br>
                 <br>
-                <button class="w3-button w3-ripple w3-flat-midnight-blue" type="submit">Submit</button>
+                <button class="w3-button w3-ripple w3-flat-midnight-blue w3-round" type="submit">Submit</button>
             </fieldset>
         </form>
 

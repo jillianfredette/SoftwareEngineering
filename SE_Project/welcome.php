@@ -51,7 +51,6 @@
       </div>
    </div>
 
-
    <div class="w3-container w3-center">
 
     <header class="w3-panel w3-center" style="padding-top:25px">
@@ -60,6 +59,22 @@
         </h1>
     </header>
     </div>
+
+    <div class="w3-card-4 w3-blue-gray w3-center w3-display-middle" style="width:50%">
+      <div class="w3-margin-top">
+      <h2>Global Links</h2>
+      </div>
+
+      <div class="w3-container" style="padding-bottom:20px">
+      <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Manage User Accounts</a>
+      <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Assign Roles</a>
+      <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Help Desk</a>
+      </div>
+
+      
+
+   </div>
+
    </body>
    
 </html>
