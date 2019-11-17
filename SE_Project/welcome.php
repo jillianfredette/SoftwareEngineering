@@ -1,7 +1,7 @@
 <?php
 include('session.php');
 ?>
-<html">
+<html>
 
    <head>
       <title>Welcome </title>
@@ -69,9 +69,9 @@ include('session.php');
          </div>
 
          <div class="w3-container" style="padding-bottom:20px">
-            <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Manage User Accounts</a>
-            <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Assign Roles</a>
-            <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Help Desk</a>
+            <a href="ManageUserAccounts.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Manage User Accounts</a>
+            <a href="AssignRoles.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Assign Roles</a>
+            <a href="HelpDesk.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Help Desk</a>
          </div>
       </div>
 
@@ -83,10 +83,10 @@ include('session.php');
             </div>
 
             <div class="w3-container" style="padding-bottom:20px">
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Finance Reports</a>
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Accounts Payable</a>
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Acconts Receivables</a>
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Tax</a>
+               <a href="FinanceReports.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Finance Reports</a>
+               <a href="AccountsPayable.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Accounts Payable</a>
+               <a href="AccountsReceivables.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Acconts Receivables</a>
+               <a href="Tax.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Tax</a>
             </div>
          </div>
          <?php elseif ($_SESSION['Admin_role'] == "SALES_ADMIN") : ?>
@@ -96,9 +96,9 @@ include('session.php');
             </div>
 
             <div class="w3-container" style="padding-bottom:20px">
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Sales Reports</a>
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Sales Leads</a>
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Sales Demo</a>
+               <a href="SalesReports.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Sales Reports</a>
+               <a href="SalesLeads.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Sales Leads</a>
+               <a href="SalesDemo.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Sales Demo</a>
             </div>
          </div>
          <?php elseif ($_SESSION['Admin_role'] == "HR_ADMIN") : ?>
@@ -108,12 +108,12 @@ include('session.php');
             </div>
 
             <div class="w3-container" style="padding-bottom:20px">
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">New Hire</a>
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">On-Boarding</a>
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Benefits</a>
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Payroll</a>
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Terminations</a>
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">HR Reports</a>
+               <a href="NewHire.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">New Hire</a>
+               <a href="Onboarding.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">On-boarding</a>
+               <a href="Benefits.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Benefits</a>
+               <a href="Payroll.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Payroll</a>
+               <a href="Terminations.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Terminations</a>
+               <a href="HRReports.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">HR Reports</a>
             </div>
          </div>
          <?php elseif ($_SESSION['Admin_role'] == "ENGG_ADMIN") : ?>
@@ -123,11 +123,11 @@ include('session.php');
             </div>
 
             <div class="w3-container" style="padding-bottom:20px">
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Application Monitoring</a>
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Tech Support</a>
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">App Development</a>
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">App Admin</a>
-               <a href="welcome.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Release Management</a>
+               <a href="ApplicationMonitoring.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Application Monitoring</a>
+               <a href="TechSupport.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Tech Support</a>
+               <a href="AppDevelopment.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">App Development</a>
+               <a href="AppAdmin.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">App Admin</a>
+               <a href="ReleaseManagement.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Release Management</a>
             </div>
          </div>
       <?php endif; ?>
