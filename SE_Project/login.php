@@ -80,7 +80,7 @@
 <body class="w3-panel w3-center w3-flat-silver">
 
 <div class="w3-container w3-center">
-    <header class="w3-panel w3-center" style="padding-top:25px">
+    <header class="w3-panel w3-center" style="padding-top:40px">
         <h1 class="w3-text-dark-grey">
             Admin Portal
         </h1>
