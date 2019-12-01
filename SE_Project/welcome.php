@@ -38,6 +38,10 @@ include('session.php');
          .material-icons {
             vertical-align: -15%
          }
+        .admin-links{
+            text-align:center;
+            background:yellowgreen !important;
+        }
       </style>
    </head>
 
