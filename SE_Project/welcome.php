@@ -81,7 +81,7 @@ include('session.php');
 
 
       <?php if ($_SESSION['Admin_role'] == "FINANCE_ADMIN") : ?>
-         <div class="w3-card-4 w3-blue-gray w3-center" style="width:80%">
+         <div class="w3-card-4 w3-blue-gray w3-center admin-links" style="width:80%">
             <div class="w3-margin-top" style="padding-top:15px">
                <h3>Finance Links</h3>
             </div>
@@ -94,7 +94,7 @@ include('session.php');
             </div>
          </div>
          <?php elseif ($_SESSION['Admin_role'] == "SALES_ADMIN") : ?>
-         <div class="w3-card-4 w3-blue-gray w3-center" style="width:80%">
+         <div class="w3-card-4 w3-blue-gray w3-center admin-links" style="width:80%">
             <div class="w3-margin-top" style="padding-top:15px">
                <h3>Sales Links</h3>
             </div>
@@ -106,7 +106,7 @@ include('session.php');
             </div>
          </div>
          <?php elseif ($_SESSION['Admin_role'] == "HR_ADMIN") : ?>
-         <div class="w3-card-4 w3-blue-gray w3-center" style="width:80%">
+         <div class="w3-card-4 w3-blue-gray w3-center admin-links" style="width:80%">
             <div class="w3-margin-top" style="padding-top:15px">
                <h3>HR Links</h3>
             </div>
@@ -121,7 +121,7 @@ include('session.php');
             </div>
          </div>
          <?php elseif ($_SESSION['Admin_role'] == "ENGG_ADMIN") : ?>
-         <div class="w3-card-4 w3-blue-gray w3-center" style="width:80%">
+         <div class="w3-card-4 w3-blue-gray w3-center admin-links" style="width:80%">
             <div class="w3-margin-top" style="padding-top:15px">
                <h3>Engineering Links</h3>
             </div>
