@@ -40,7 +40,7 @@ include('session.php');
          }
         .admin-links{
             text-align:center;
-            background:yellowgreen !important;
+            background:#627736 !important;
         }
       </style>
    </head>
