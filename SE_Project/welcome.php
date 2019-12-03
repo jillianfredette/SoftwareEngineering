@@ -1,4 +1,7 @@
 <?php
+
+//the welcome page is the main part of the admin portal which the user is redirected to if their login attempt was successful
+//the links shown depend on what admin role the user has, taken from the database
 include('session.php');
 ?>
 <html>
@@ -47,7 +50,7 @@ include('session.php');
 
    <body class="w3-panel w3-center w3-flat-silver">
 
-
+        <!-- in the upper left corner the admin's username is displayed and when it is hovered over, the sign-out button appears -->
       <div class="w3-dropdown-hover w3-left">
          <button class="w3-button w3-flat-silver">
             <i class="material-icons w3-xlarge">person</i>
@@ -66,6 +69,7 @@ include('session.php');
          </header>
       </div>
 
+        <!-- global links are displayed for all admin roles -->
          <center>
       <div class="w3-card-4 w3-blue-gray w3-center" style="width:80%">
          <div class="w3-margin-top" style="padding-top:15px">
@@ -79,7 +83,9 @@ include('session.php');
          </div>
       </div>
 
+        <!-- start the if-else statements that will display different links depending on the admin role -->
 
+        <!-- if the admin has the finance role then display the finance links -->
       <?php if ($_SESSION['Admin_role'] == "FINANCE_ADMIN") : ?>
          <div class="w3-card-4 w3-blue-gray w3-center admin-links" style="width:80%">
             <div class="w3-margin-top" style="padding-top:15px">
@@ -93,6 +99,8 @@ include('session.php');
                <a href="Tax.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Tax</a>
             </div>
          </div>
+
+         <!-- if the admin has the sales role then display the sales links -->
          <?php elseif ($_SESSION['Admin_role'] == "SALES_ADMIN") : ?>
          <div class="w3-card-4 w3-blue-gray w3-center admin-links" style="width:80%">
             <div class="w3-margin-top" style="padding-top:15px">
@@ -105,6 +113,8 @@ include('session.php');
                <a href="SalesDemo.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">Sales Demo</a>
             </div>
          </div>
+
+         <!-- if the admin has the hr role then display the hr links -->
          <?php elseif ($_SESSION['Admin_role'] == "HR_ADMIN") : ?>
          <div class="w3-card-4 w3-blue-gray w3-center admin-links" style="width:80%">
             <div class="w3-margin-top" style="padding-top:15px">
@@ -120,6 +130,8 @@ include('session.php');
                <a href="HRReports.php" class="w3-button w3-ripple w3-flat-midnight-blue w3-round w3-margin">HR Reports</a>
             </div>
          </div>
+
+         <!-- if the admin has the engineering role then display the engineering links -->
          <?php elseif ($_SESSION['Admin_role'] == "ENGG_ADMIN") : ?>
          <div class="w3-card-4 w3-blue-gray w3-center admin-links" style="width:80%">
             <div class="w3-margin-top" style="padding-top:15px">

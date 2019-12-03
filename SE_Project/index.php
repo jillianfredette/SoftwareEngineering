@@ -10,6 +10,7 @@
 <body>
 
 <?php
+  //entry point for the web app
   header("location:login.php");
 ?>
 

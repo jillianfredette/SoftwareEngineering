@@ -1,30 +1,34 @@
 <?php
    include('includes/dbh.inc.php');
+   //begins the database session
    session_start();
-   
+   //builds the error message in the occurence of an error
    $error_message = "";
 
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
-      
       $myusername = mysqli_real_escape_string($conn,$_POST['username']);
       $mypassword = mysqli_real_escape_string($conn,$_POST['password']); 
       
+      //query to find the user in the database based off of what was entered in the login fields
       $sql = "SELECT Admin_ID, Admin_Username, Admin_Role FROM se_database.ADMIN WHERE Admin_Username = '$myusername' and AES_DECRYPT(Admin_Password,'COSC4351') = '$mypassword'";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       
+      //determines the number of rows in the result
       $count = mysqli_num_rows($result);
       
-      // If result matched $myusername and $mypassword, table row must be 1 row
-		
+      // If result matched $myusername and $mypassword, table row must be 1 row because usernames are unique
       if($count == 1) {
+         //stores the user information in the session to handle determination of what links are shown
          $_SESSION['login_user'] = $row['Admin_ID'];
          $_SESSION['Username'] = $row['Admin_Username'];
          $_SESSION['Admin_role'] = $row['Admin_Role'];
          
+         //redirects to the welcome page of the admin portal where the links are displayed
          header("location: welcome.php");
       }else {
+          //if the count != 1 then either the user doesn't exist, the password was invalid, or another error
          $error_message = "Error: Your Username or Password is Invalid";
       }
    }
@@ -93,6 +97,7 @@
             Login
         </h2>
 
+        <!-- the form takes the username and password to login to the portal -->
         <form id='login' action="" method='post' accept-charset='UTF-8' style="margin: 0px auto; width: 300px;">
             <fieldset style="width:300px; align-content: right; padding-right:25px">
                 <input type='hidden' name='submitted' id='submitted' value='1' />
@@ -107,7 +112,7 @@
                 <button class="w3-button w3-ripple w3-flat-midnight-blue w3-round" type="submit">Submit</button>
             </fieldset>
         </form>
-
+        <!-- displays the error message if the login attempt was invalid -->
         <div align="center" style="font-size:14px; color:#8b0000; padding-bottom:20px">
         <b><?php echo $error_message; ?></b>
         </div>
